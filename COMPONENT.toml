@@ -1,0 +1,16 @@
+[component]
+name = "devtools"
+tier = 2
+stability = "beta"
+language = "rust"
+description = "Arch devtools port — chroot builds, db-update, commitpkg"
+upstream = ["https://github.com/archlinux/devtools"]
+
+[contract]
+provides = ["chroot-build", "db-update", "commit-pkg"]
+depends_on = ["pacman-contrib"]
+
+[maturity]
+status = "Beta"
+test_evidence = "cargo test: devtools core tests pass"
+next_milestone = "Hardware and runtime integration"
